@@ -4,3 +4,5 @@ __pycache__/
 *.pyc
 raw_data/
 clean_data/
+logs/
+*.log
