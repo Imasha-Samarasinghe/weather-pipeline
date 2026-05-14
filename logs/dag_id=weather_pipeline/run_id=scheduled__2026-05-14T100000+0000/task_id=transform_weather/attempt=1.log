@@ -1,0 +1,100 @@
+[2026-05-14T11:10:34.223+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-05-14T11:10:34.318+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: weather_pipeline.transform_weather scheduled__2026-05-14T10:00:00+00:00 [queued]>
+[2026-05-14T11:10:34.348+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: weather_pipeline.transform_weather scheduled__2026-05-14T10:00:00+00:00 [queued]>
+[2026-05-14T11:10:34.350+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 3
+[2026-05-14T11:10:34.392+0000] {taskinstance.py:2327} INFO - Executing <Task(PythonOperator): transform_weather> on 2026-05-14 10:00:00+00:00
+[2026-05-14T11:10:34.419+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'weather_pipeline', 'transform_weather', 'scheduled__2026-05-14T10:00:00+00:00', '--job-id', '18', '--raw', '--subdir', 'DAGS_FOLDER/weather_pipeline_dag.py', '--cfg-path', '/tmp/tmpiuvlh3hr']
+[2026-05-14T11:10:34.434+0000] {standard_task_runner.py:91} INFO - Job 18: Subtask transform_weather
+[2026-05-14T11:10:34.454+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=184) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-05-14T11:10:34.457+0000] {standard_task_runner.py:63} INFO - Started process 185 to run task
+[2026-05-14T11:10:34.707+0000] {task_command.py:426} INFO - Running <TaskInstance: weather_pipeline.transform_weather scheduled__2026-05-14T10:00:00+00:00 [running]> on host 75f0d218eef1
+[2026-05-14T11:10:35.073+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='isuru' AIRFLOW_CTX_DAG_ID='weather_pipeline' AIRFLOW_CTX_TASK_ID='transform_weather' AIRFLOW_CTX_EXECUTION_DATE='2026-05-14T10:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-05-14T10:00:00+00:00'
+[2026-05-14T11:10:35.075+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-05-14T11:10:38.921+0000] {transform.py:98} INFO - ==================================================
+[2026-05-14T11:10:38.924+0000] {transform.py:99} INFO - Starting transform job
+[2026-05-14T11:10:38.931+0000] {transform.py:100} INFO - ==================================================
+[2026-05-14T11:10:38.949+0000] {transform.py:108} INFO - Found 36 raw JSON files to process
+[2026-05-14T11:10:38.966+0000] {transform.py:122} INFO - Parsed: Colombo | 26.69°C | light rain
+[2026-05-14T11:10:38.984+0000] {transform.py:122} INFO - Parsed: Colombo | 23.35°C | light rain
+[2026-05-14T11:10:38.991+0000] {transform.py:122} INFO - Parsed: Colombo | 23.35°C | light rain
+[2026-05-14T11:10:39.000+0000] {transform.py:122} INFO - Parsed: Colombo | 23.35°C | light rain
+[2026-05-14T11:10:39.008+0000] {transform.py:122} INFO - Parsed: Colombo | 23.35°C | light rain
+[2026-05-14T11:10:39.021+0000] {transform.py:122} INFO - Parsed: Colombo | 23.35°C | light rain
+[2026-05-14T11:10:39.026+0000] {transform.py:122} INFO - Parsed: London | 9.07°C | broken clouds
+[2026-05-14T11:10:39.031+0000] {transform.py:122} INFO - Parsed: London | 10.84°C | broken clouds
+[2026-05-14T11:10:39.035+0000] {transform.py:122} INFO - Parsed: London | 10.84°C | broken clouds
+[2026-05-14T11:10:39.039+0000] {transform.py:122} INFO - Parsed: London | 10.84°C | broken clouds
+[2026-05-14T11:10:39.043+0000] {transform.py:122} INFO - Parsed: London | 10.84°C | broken clouds
+[2026-05-14T11:10:39.047+0000] {transform.py:122} INFO - Parsed: London | 11.12°C | light rain
+[2026-05-14T11:10:39.051+0000] {transform.py:122} INFO - Parsed: New York | 13.42°C | overcast clouds
+[2026-05-14T11:10:39.055+0000] {transform.py:122} INFO - Parsed: New York | 13.1°C | fog
+[2026-05-14T11:10:39.059+0000] {transform.py:122} INFO - Parsed: New York | 13.1°C | fog
+[2026-05-14T11:10:39.063+0000] {transform.py:122} INFO - Parsed: New York | 13.1°C | fog
+[2026-05-14T11:10:39.067+0000] {transform.py:122} INFO - Parsed: New York | 13.1°C | fog
+[2026-05-14T11:10:39.072+0000] {transform.py:122} INFO - Parsed: New York | 13.18°C | light rain
+[2026-05-14T11:10:39.076+0000] {transform.py:122} INFO - Parsed: Seoul | 30.76°C | clear sky
+[2026-05-14T11:10:39.081+0000] {transform.py:122} INFO - Parsed: Seoul | 25.76°C | clear sky
+[2026-05-14T11:10:39.085+0000] {transform.py:122} INFO - Parsed: Seoul | 25.76°C | clear sky
+[2026-05-14T11:10:39.089+0000] {transform.py:122} INFO - Parsed: Seoul | 25.76°C | clear sky
+[2026-05-14T11:10:39.093+0000] {transform.py:122} INFO - Parsed: Seoul | 25.76°C | clear sky
+[2026-05-14T11:10:39.097+0000] {transform.py:122} INFO - Parsed: Seoul | 25.76°C | clear sky
+[2026-05-14T11:10:39.101+0000] {transform.py:122} INFO - Parsed: Sydney | 16.52°C | light rain
+[2026-05-14T11:10:39.105+0000] {transform.py:122} INFO - Parsed: Sydney | 16.12°C | light rain
+[2026-05-14T11:10:39.109+0000] {transform.py:122} INFO - Parsed: Sydney | 16.12°C | light rain
+[2026-05-14T11:10:39.113+0000] {transform.py:122} INFO - Parsed: Sydney | 16.12°C | light rain
+[2026-05-14T11:10:39.117+0000] {transform.py:122} INFO - Parsed: Sydney | 16.12°C | light rain
+[2026-05-14T11:10:39.122+0000] {transform.py:122} INFO - Parsed: Sydney | 16.12°C | light rain
+[2026-05-14T11:10:39.127+0000] {transform.py:122} INFO - Parsed: Tokyo | 20.45°C | thunderstorm
+[2026-05-14T11:10:39.131+0000] {transform.py:122} INFO - Parsed: Tokyo | 16.43°C | broken clouds
+[2026-05-14T11:10:39.136+0000] {transform.py:122} INFO - Parsed: Tokyo | 16.43°C | broken clouds
+[2026-05-14T11:10:39.140+0000] {transform.py:122} INFO - Parsed: Tokyo | 16.43°C | broken clouds
+[2026-05-14T11:10:39.144+0000] {transform.py:122} INFO - Parsed: Tokyo | 16.43°C | broken clouds
+[2026-05-14T11:10:39.149+0000] {transform.py:122} INFO - Parsed: Tokyo | 16.56°C | broken clouds
+[2026-05-14T11:10:39.176+0000] {transform.py:140} INFO - Saved 36 clean records to clean_data/weather_clean_2026-05-14_11-10-39.csv
+[2026-05-14T11:10:39.178+0000] {transform.py:141} INFO - Transform complete
+[2026-05-14T11:10:39.180+0000] {logging_mixin.py:188} INFO - 
+--- CLEAN DATA PREVIEW ---
+[2026-05-14T11:10:39.207+0000] {logging_mixin.py:188} INFO -     city  temp_c  humidity_pct    weather_desc         recorded_at
+ Colombo   26.69            95      light rain 2026-05-14 07:56:25
+ Colombo   23.35            95      light rain 2026-05-14 10:46:22
+ Colombo   23.35            95      light rain 2026-05-14 10:46:22
+ Colombo   23.35            95      light rain 2026-05-14 10:46:22
+ Colombo   23.35            95      light rain 2026-05-14 10:46:22
+ Colombo   23.35            95      light rain 2026-05-14 11:05:08
+  London    9.07            74   broken clouds 2026-05-14 07:52:44
+  London   10.84            66   broken clouds 2026-05-14 10:47:53
+  London   10.84            66   broken clouds 2026-05-14 10:47:53
+  London   10.84            66   broken clouds 2026-05-14 10:47:53
+  London   10.84            66   broken clouds 2026-05-14 10:47:53
+  London   11.12            64      light rain 2026-05-14 11:03:33
+New York   13.42            89 overcast clouds 2026-05-14 07:59:50
+New York   13.10            89             fog 2026-05-14 10:48:30
+New York   13.10            89             fog 2026-05-14 10:48:30
+New York   13.10            89             fog 2026-05-14 10:48:30
+New York   13.10            89             fog 2026-05-14 10:48:30
+New York   13.18            88      light rain 2026-05-14 11:03:45
+   Seoul   30.76            35       clear sky 2026-05-14 07:56:44
+   Seoul   25.76            50       clear sky 2026-05-14 10:44:17
+   Seoul   25.76            50       clear sky 2026-05-14 10:44:17
+   Seoul   25.76            50       clear sky 2026-05-14 10:53:57
+   Seoul   25.76            50       clear sky 2026-05-14 10:53:57
+   Seoul   25.76            50       clear sky 2026-05-14 11:00:50
+  Sydney   16.52            89      light rain 2026-05-14 07:59:31
+  Sydney   16.12            94      light rain 2026-05-14 10:51:46
+  Sydney   16.12            94      light rain 2026-05-14 10:51:46
+  Sydney   16.12            94      light rain 2026-05-14 10:51:46
+  Sydney   16.12            94      light rain 2026-05-14 10:51:46
+  Sydney   16.12            94      light rain 2026-05-14 11:10:13
+   Tokyo   20.45            69    thunderstorm 2026-05-14 07:57:04
+   Tokyo   16.43            79   broken clouds 2026-05-14 10:50:43
+   Tokyo   16.43            79   broken clouds 2026-05-14 10:50:43
+   Tokyo   16.43            79   broken clouds 2026-05-14 10:50:43
+   Tokyo   16.43            79   broken clouds 2026-05-14 10:50:43
+   Tokyo   16.56            79   broken clouds 2026-05-14 11:01:49
+[2026-05-14T11:10:39.208+0000] {logging_mixin.py:188} INFO - --------------------------
+[2026-05-14T11:10:39.208+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-05-14T11:10:39.210+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-05-14T11:10:39.237+0000] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=weather_pipeline, task_id=transform_weather, execution_date=20260514T100000, start_date=20260514T111034, end_date=20260514T111039
+[2026-05-14T11:10:39.303+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-05-14T11:10:39.362+0000] {taskinstance.py:3482} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-05-14T11:10:39.373+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
